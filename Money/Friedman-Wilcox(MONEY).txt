@@ -1,0 +1,26 @@
+Fr=46.25199999999995 p-value=2.1826853574645103e-09
+
+Distr. chi quadro = 9.49
+
+Fr > Chi-quadro
+=> accettiamo l'ipotesi alternativa che la mediana non è uguale 
+per tutti i valori
+
+
+Wilcox(Betweeness-In_degree)=11876 p-value = 0.01296
+=> accettiamo l'ipotesi alternativa che la Me(Bet) > Me(In-degree)
+
+Wilcox(Betweeness-Out_degree)=5746 p-value = 4.258e-08
+=> accettiamo l'ipotesi alternativa che la Me(Bet) < Me(Out-degree)
+
+Wilcox(Betweeness-Page_rank)=13065 p-value= 0.0001043
+=> accettiamo l'ipotesi alternativa che la Me(Bet) > Me(Page_rank)
+
+Wilcox(Eigenvector-Out_degree)=8643 p-value= 0.04307
+=> accettiamo l'ipotesi alternativa che la Me(Eig) < Me(Out_degree)
+
+Wilcox(In_degree-Out_degree)=8233 p-value=0.01322
+=> accettiamo l'ipotesi alternativa che la Me(In_degree) < Me(Out_degree)
+
+Wilcox(Out_degree-Page_rank)=13379 p-value= 2.027e-05
+=> accettiamo l'ipotesi alternativa che la Me(Out_degree) > Me(Page_rank)
