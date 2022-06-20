@@ -1,0 +1,7 @@
+12.60400000000027 0.013381906886425429
+
+
+Distr. chi quadro = 9.49
+
+=> in teoria accettiamo l'ipotesi alternativa
+che alcune mediane sono differenti tra loro
