@@ -1,0 +1,10 @@
+
+pdf("Diagramma_di_dispersione.pdf")
+pairs(dataset)
+dev.off()
+
+x <- cor(dataset,method="spearman")
+write.table(x,file="spearman.csv",quote=F,sep=";",dec=",",na="", row.names=T,col.names=T)
+
+x <- cor(dataset,method="kendall")
+write.table(x,file="kendall.csv",quote=F,sep=";",dec=",",na="", row.names=T,col.names=T)

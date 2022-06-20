@@ -1,0 +1,32 @@
+bet <- read.table(file="Approx_Betweenness.txt",header=FALSE,sep="\n",dec=".")
+close <- read.table(file="Closeness_Centrality.txt",header=FALSE,sep="\n",dec=".")
+eig <- read.table(file="Eigenvector_Centrality.txt",header=FALSE,sep="\n",dec=".")
+indegree <- read.table(file="Degree_Centrality(In-degree).txt",header=FALSE,sep="\n",dec=".")
+outdegree <- read.table(file="Degree_Centrality(Out-degree).txt",header=FALSE,sep="\n",dec=".")
+katz <- read.table(file="Katz_Centrality.txt",header=FALSE,sep="\n",dec=".")
+page <- read.table(file="Page_Rank.txt",header=FALSE,sep="\n",dec=".")
+dataset <- data.frame(Betweeness=bet$V1,Closeness=close$V1,Eigenvector=eig$V1,In_degree=indegree$V1,Out_degree=outdegree$V1,Katz=katz$V1,Page_Rank=page$V1)
+
+
+bet <- read.table(file="Stand_Betweeness.txt",header=FALSE,sep="\n",dec=".")
+eig <- read.table(file="Stand_Eigenvector.txt",header=FALSE,sep="\n",dec=".")
+indegree <- read.table(file="Stand_Indegree.txt",header=FALSE,sep="\n",dec=".")
+outdegree <- read.table(file="Stand_Outdegree.txt",header=FALSE,sep="\n",dec=".")
+page <- read.table(file="Stand_Pagerank.txt",header=FALSE,sep="\n",dec=".")
+dataset <- data.frame(Betweeness=bet$V1,Eigenvector=eig$V1,In_degree=indegree$V1,Out_degree=outdegree$V1,Page_Rank=page$V1)
+
+
+bet <- read.table(file="Valori_Betweeness.txt",header=FALSE,sep="\n",dec=".")
+eig <- read.table(file="Valori_Eigenvector.txt",header=FALSE,sep="\n",dec=".")
+indegree <- read.table(file="Valori_Indegree.txt",header=FALSE,sep="\n",dec=".")
+outdegree <- read.table(file="Valori_Outdegree.txt",header=FALSE,sep="\n",dec=".")
+page <- read.table(file="Valori_Pagerank.txt",header=FALSE,sep="\n",dec=".")
+dataset <- data.frame(Betweeness=bet$V1,Eigenvector=eig$V1,In_degree=indegree$V1,Out_degree=outdegree$V1,Page_Rank=page$V1)
+
+
+bet <- read.table(file="Approx_Betweenness.txt",header=FALSE,sep="\n",dec=".")
+eig <- read.table(file="Eigenvector_Centrality.txt",header=FALSE,sep="\n",dec=".")
+indegree <- read.table(file="Degree_Centrality(In-degree).txt",header=FALSE,sep="\n",dec=".")
+outdegree <- read.table(file="Degree_Centrality(Out-degree).txt",header=FALSE,sep="\n",dec=".")
+page <- read.table(file="Page_Rank.txt",header=FALSE,sep="\n",dec=".")
+dataset <- data.frame(Betweeness=bet$V1,Eigenvector=eig$V1,In_degree=indegree$V1,Out_degree=outdegree$V1,Page_Rank=page$V1)

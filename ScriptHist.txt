@@ -1,0 +1,68 @@
+*200 CENTRALITà*
+pdf("HistogramBetweeness.pdf")
+histbet <- hist(dataset$Betweeness,main="Istogramma betweeness",xlab="Betweeness")
+dev.off()
+pdf("HistogramEigenvector.pdf")
+histeig <- hist(dataset$Eigenvector,main="Istogramma eigenvector",xlab="Eigenvector")
+dev.off()
+pdf("HistogramIndegree.pdf")
+histin <- hist(dataset$In_degree,main="Istogramma in-degree",xlab="In-degree")
+dev.off()
+pdf("HistogramOutdegree.pdf")
+histout <- hist(dataset$Out_degree,main="Istogramma out-degree",xlab="Out-degree")
+dev.off()
+pdf("HistogramPagerank.pdf")
+histpage <- hist(dataset$Page_Rank, main="Istogramma page-rank",xlab="Page-rank")
+dev.off()
+
+*TUTTE LE CENTRLAITà*
+stembet <- stem(dataset$Betweeness)
+
+stembet <- stem(dataset$Eigenvector)
+
+stembet <- stem(dataset$In_degree)
+
+stembet <- stem(dataset$Out_degree)
+
+stembet <- stem(dataset$Page_Rank)
+
+
+jpeg("Diagramma_di_dispersione.jpeg")
+pairs(dataset)
+dev.off()
+
+
+
+sd(dataset$Betweeness)
+sd(dataset$Closeness)
+sd(dataset$Eigenvector)
+sd(dataset$In_degree)
+sd(dataset$Out_degree)
+sd(dataset$Katz)
+sd(dataset$Page_Rank)
+
+library(labstatR)
+
+skew(dataset$Betweeness)
+skew(dataset$Closeness)
+skew(dataset$Eigenvector)
+skew(dataset$In_degree)
+skew(dataset$Out_degree)
+skew(dataset$Katz)
+skew(dataset$Page_Rank)
+
+kurt(dataset$Betweeness)
+kurt(dataset$Closeness)
+kurt(dataset$Eigenvector)
+kurt(dataset$In_degree)
+kurt(dataset$Out_degree)
+kurt(dataset$Katz)
+kurt(dataset$Page_Rank)
+
+cv(dataset$Betweeness)
+cv(dataset$Closeness)
+cv(dataset$Eigenvector)
+cv(dataset$In_degree)
+cv(dataset$Out_degree)
+cv(dataset$Katz)
+cv(dataset$Page_Rank)

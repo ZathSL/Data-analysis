@@ -1,0 +1,91 @@
+b <- bet[bet>0]
+c <- close[close>0]
+e <- eig[eig>1e-09]
+i <- indegree[indegree>0]
+o <- outdegree[outdegree>0]
+k <- katz[katz>0]
+p <- page[page>0]
+library("poweRlaw")
+
+m_pl = conpl$new(b)
+m_ln = conlnorm$new(b)
+est = estimate_xmin(m_pl)
+m_pl$setXmin(est)
+est = estimate_xmin(m_ln)
+m_ln$setXmin(est)
+pdf("PowerlawBet.pdf")
+plot(m_pl,xlab="Betweeness",ylab="CDF",main="Betweeness - CDF")
+lines(m_pl, col = 2, lwd=3)
+lines(m_ln, col = 3, lwd=3)
+dev.off()
+
+
+m_pl = conpl$new(c)
+m_ln = conlnorm$new(c)
+est = estimate_xmin(m_pl)
+m_pl$setXmin(est)
+est = estimate_xmin(m_ln)
+m_ln$setXmin(est)
+pdf("PowerlawClose.pdf")
+plot(m_ln,xlab="Closeness",ylab="CDF",main="Closeness - CDF")
+lines(m_pl, col = 2, lwd=3)
+lines(m_ln, col = 3, lwd=3)
+dev.off()
+
+
+m_ln = conlnorm$new(e)
+est = estimate_xmin(m_ln)
+m_ln$setXmin(est)
+pdf("PowerlawEig.pdf")
+plot(m_ln,xlab="Eigenvector",ylab="CDF",main="Eigenvector - CDF")
+lines(m_pl, col = 2, lwd=3)
+lines(m_ln, col = 3, lwd=3)
+dev.off()
+
+
+m_pl = conpl$new(i)
+m_ln = conlnorm$new(i)
+est = estimate_xmin(m_pl)
+m_pl$setXmin(est)
+est = estimate_xmin(m_ln)
+m_ln$setXmin(est)
+pdf("PowerlawIndegree.pdf")
+plot(m_pl,xlab="In-degree",ylab="CDF",main="In_degree - CDF")
+lines(m_pl, col = 2, lwd=3)
+lines(m_ln, col = 3, lwd=3)
+dev.off()
+
+
+m_pl = conpl$new(o)
+m_ln = conlnorm$new(o)
+est = estimate_xmin(m_pl)
+m_pl$setXmin(est)
+est = estimate_xmin(m_ln)
+m_ln$setXmin(est)
+pdf("PowerlawOutdegree.pdf")
+plot(m_pl,xlab="Out-degree",ylab="CDF",main="Out_degree - CDF")
+lines(m_pl, col = 2, lwd=3)
+lines(m_ln, col = 3, lwd=3)
+dev.off()
+
+
+m_pl = conpl$new(k)
+m_ln = conlnorm$new(k)
+est = estimate_xmin(m_pl)
+m_pl$setXmin(est)
+est = estimate_xmin(m_ln)
+m_ln$setXmin(est)
+pdf("PowerlawKatz.pdf")
+plot(m_pl,xlab="Katz",ylab="CDF",main="Katz - CDF")
+lines(m_pl, col = 2, lwd=3)
+lines(m_ln, col = 3, lwd=3)
+dev.off()
+
+
+m_pl = conpl$new(p)
+est = estimate_xmin(m_pl)
+m_pl$setXmin(est)
+pdf("PowerlawPagerank.pdf")
+plot(m_pl,xlab="Pagerank",ylab="CDF",main="Page-Rank - CDF")
+lines(m_pl, col = 2, lwd=3)
+dev.off()
