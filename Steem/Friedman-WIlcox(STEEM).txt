@@ -1,0 +1,12 @@
+7.988000000000284 0.09201876014120511
+
+Distr. chi quadro = 9.49
+
+Fr < chi-quadro 
+=> in teoria accettiamo l'ipotesi nulla, per il quale tutte 
+le mediane sono uguali
+
+però attuando la statistica di Wilcox troviamo la differenza:
+
+Wilcox(Betweeness-Out_degree)=11434 p-value= 0.04571
+=> accettiamo l'ipotesi alternativa Me(bet)>Me(Out_degree)
